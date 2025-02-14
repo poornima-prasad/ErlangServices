@@ -20,12 +20,12 @@ start_link() ->
 init([]) ->
     SupFlags = #{strategy => one_for_one, intensity => 1, period => 5},
     ChildSpecs = [
-        #{id => my_app_worker,
-            start => {my_app_worker, start_link, []},
+        #{id => rest_app_worker,
+            start => {rest_app_worker, start_link, []},
             restart => permanent,
             shutdown => 5000,
             type => worker,
-            modules => [my_app_worker]}
+            modules => [rest_app_worker]}
     ],
     {ok, {SupFlags, ChildSpecs}}.
 

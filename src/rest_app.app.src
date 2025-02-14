@@ -3,8 +3,8 @@
         {description, "A simple Erlang application"},
         {vsn, "1.0.0"},
         {modules, [rest_app, rest_app_sup, rest_app_worker]},
-        {registered, [my_app_sup]},
-        {applications, [kernel, stdlib,cowboy,jiffy]},
-        {mod, {my_app, []}},
+        {registered, [rest_app_sup]},
+        {applications, [kernel,stdlib,cowboy,jiffy,sasl]},
+        {mod, {rest_app, []}},
         {env, []}
     ]}.
