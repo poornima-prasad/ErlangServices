@@ -1,0 +1,10 @@
+{application, rest_app,
+    [
+        {description, "A simple Erlang application"},
+        {vsn, "1.0.0"},
+        {modules, [rest_app, rest_app_sup, rest_app_worker]},
+        {registered, [my_app_sup]},
+        {applications, [kernel, stdlib]},
+        {mod, {my_app, []}},
+        {env, []}
+    ]}.
